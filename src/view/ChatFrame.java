@@ -39,7 +39,7 @@ public class ChatFrame {
             //! Create the chat frame
             chatFrame = new JFrame("Server");
             chatFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            chatFrame.setSize(1000, 500);
+            chatFrame.setSize(400, 300);
             chatFrame.setLocationRelativeTo(null);
             chatFrame.setLayout(new BorderLayout());
 

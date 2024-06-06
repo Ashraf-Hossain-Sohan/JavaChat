@@ -32,7 +32,7 @@ public class Login {
 
         JFrame frame = new JFrame("X Convo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1070, 600);
+        frame.setSize(700, 500);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new BorderLayout());
 
@@ -49,7 +49,17 @@ public class Login {
         label.setBounds(0, 0, imageIcon.getIconWidth(), imageIcon.getIconHeight());
 
         //! Create a panel for the login form
-        JPanel panel = new JPanel();
+        //JPanel panel = new JPanel();
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Set the background color with alpha value to create transparency
+                g.setColor(new Color(255, 255, 255, 0)); // Alpha value of 51 (approximately 20% opacity)
+                g.fillRect(0, 0, getWidth(), getHeight());
+            }
+        };
+
         panel.setOpaque(false);
         //! Make the panel transparent
         panel.setLayout(new GridBagLayout());
@@ -57,7 +67,7 @@ public class Login {
         gbc.insets = new Insets(10, 10, 10, 10);
 
         //! Add components to the panel
-        JLabel usernameLabel = new JLabel("First Name:");
+        JLabel usernameLabel = new JLabel("Username:");
         gbc.gridx = 0;
         gbc.gridy = 0;
         panel.add(usernameLabel, gbc);

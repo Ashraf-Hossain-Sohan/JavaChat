@@ -17,7 +17,7 @@ public class ClientChat {
         JFrame clientFrame = new JFrame("Chat Client");
         clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         clientFrame.setSize(400, 300);
-        clientFrame.setLocationRelativeTo(null);
+        //clientFrame.setLocationRelativeTo(null);
         clientFrame.setLayout(new BorderLayout());
 
         chatArea = new JTextArea();
@@ -119,9 +119,9 @@ public class ClientChat {
     }
 
 
-    public static void main(String[] args) {
-        new ClientChat();
-    }
+//    public static void main(String[] args) {
+//        new ClientChat();
+//    }
 }
 class ReaderThread implements Runnable {
     private Socket socket;
